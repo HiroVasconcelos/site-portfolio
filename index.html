@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guilherme Vasconcelos | Portfólio</title>
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="style.css">
+        
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['Inter', 'sans-serif'],
+                        },
+                        colors: {
+                            brand: {
+                                500: '#3b82f6', // Azul principal
+                                600: '#2563eb', // Azul hover
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body class="bg-gray-50 text-gray-900 antialiased selection:bg-brand-500 selection:text-white">
+        
+        <div id="toast-notification" class="fixed bottom-6 right-6 transform translate-y-10 opacity-0 transition-all duration-300 bg-gray-900 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 z-50 pointer-events-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span class="font-medium">E-mail copiado com sucesso!</span>
+        </div>
+
+        <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                        <a href="#home" class="text-xl font-bold tracking-tighter text-gray-900">Guilherme<span class="text-brand-500"> Ayres Vasconcelos</span></a>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#sobre" class="text-sm font-medium text-gray-600 hover:text-brand-500 transition-colors">Sobre</a>
+                        <a href="#skills" class="text-sm font-medium text-gray-600 hover:text-brand-500 transition-colors">Skills</a>
+                        <a href="#projetos" class="text-sm font-medium text-gray-600 hover:text-brand-500 transition-colors">Projetos</a>
+                        <a href="#experiencia" class="text-sm font-medium text-gray-600 hover:text-brand-500 transition-colors">Experiência</a>
+                        <a href="#contato" class="text-sm font-medium px-4 py-2 rounded-md bg-gray-900 text-white hover:bg-gray-800 transition-colors">Contato</a>
+                    </div>
+
+                    <div class="flex items-center md:hidden">
+                        <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                            <i data-lucide="menu" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#sobre" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-500 hover:bg-gray-50">Sobre</a>
+                    <a href="#skills" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-500 hover:bg-gray-50">Skills</a>
+                    <a href="#projetos" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-500 hover:bg-gray-50">Projetos</a>
+                    <a href="#experiencia" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-500 hover:bg-gray-50">Experiência</a>
+                    <a href="#contato" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-500 hover:bg-gray-50">Contato</a>
+                </div>
+            </div>
+        </nav>
+        
+        <section id="home" class="pt-32 pb-20 md:pt-48 md:pb-32 px-4 max-w-7xl mx-auto flex flex-col items-center text-center">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6 reveal">
+                Estruturando <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-cyan-500">pipelines de dados</span> e automatizando processos.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl reveal delay-100">
+                Extração, tratamento e modelagem para escalar a tomada de decisão. Construção de fluxos ETL/ELT, integração de APIs e desenvolvimento de painéis analíticos que transformam bases de dados em inteligência.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 reveal delay-200">
+                <a href="#projetos" class="px-6 py-3 rounded-lg bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors shadow-lg">Ver Projetos</a>
+                <a href="https://github.com/HiroVasconcelos" target="_blank" class="px-6 py-3 rounded-lg border border-gray-300 bg-white text-gray-700 font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                        <path d="M9 18c-4.51 2-5-2-7-2"/>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-20 bg-white border-y border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-6">Sobre mim</h2>
+                        <div class="space-y-4 text-gray-600">
+                            <p>
+                                Sou bacharel em Ciência da Computação e minha atuação principal é focada na engenharia de dados e na automação de processos. Meu trabalho consiste em construir soluções analíticas de ponta a ponta: desde a extração de dados brutos e consumo de APIs até a modelagem e disponibilização em dashboards gerenciais.
+                            </p>
+                            <p>
+                                Tenho experiência prática liderando projetos de arquitetura e manutenção de dados legados, processando milhares de interações e otimizando cargas de armazenamento, além da criação de rotinas de integração com Python e Google Apps Script. Minha stack técnica prioriza ferramentas que escalam a inteligência de negócios, com forte uso de SQL, BigQuery, Looker Studio, Power BI e fluxos ETL/ELT.
+                            </p>
+                            <p>
+                                A engenharia que aplico tem um objetivo claro: eliminar intervenções manuais em rotinas críticas e transformar informações dispersas em KPIs valiosos para escalar a tomada de decisão.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative h-64 md:h-96 rounded-2xl overflow-hidden bg-gray-200">
+                        <img src="img/perfil.jpeg" alt="Foto de perfil" class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-10 text-center">Stack Técnica</h2>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                    <div class="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-brand-500 transition-colors text-center">
+                        <i data-lucide="file-json" class="w-8 h-8 text-gray-700 mb-3"></i>
+                        <span class="font-medium text-gray-900">Python</span>
+                        <span class="text-xs text-gray-500 mt-1">Pandas, NumPy, ETL</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-brand-500 transition-colors text-center">
+                        <i data-lucide="database" class="w-8 h-8 text-gray-700 mb-3"></i>
+                        <span class="font-medium text-gray-900">SQL & BigQuery</span>
+                        <span class="text-xs text-gray-500 mt-1">Modelagem e Extração</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-brand-500 transition-colors text-center">
+                        <i data-lucide="terminal" class="w-8 h-8 text-gray-700 mb-3"></i>
+                        <span class="font-medium text-gray-900">Google Apps Script</span>
+                        <span class="text-xs text-gray-500 mt-1">Automação de Processos</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-brand-500 transition-colors text-center">
+                        <i data-lucide="table" class="w-8 h-8 text-gray-700 mb-3"></i>
+                        <span class="font-medium text-gray-900">Google Sheets</span>
+                        <span class="text-xs text-gray-500 mt-1">Lógica e Fórmulas Avançadas</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-brand-500 transition-colors text-center">
+                        <i data-lucide="webhook" class="w-8 h-8 text-gray-700 mb-3"></i>
+                        <span class="font-medium text-gray-900">Integração de APIs</span>
+                        <span class="text-xs text-gray-500 mt-1">REST, Autenticação, Webhooks</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-brand-500 transition-colors text-center">
+                        <i data-lucide="bar-chart-2" class="w-8 h-8 text-gray-700 mb-3"></i>
+                        <span class="font-medium text-gray-900">BI & Dashboards</span>
+                        <span class="text-xs text-gray-500 mt-1">Looker Studio & Power BI</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-brand-500 transition-colors text-center">
+                        <i data-lucide="layout" class="w-8 h-8 text-gray-700 mb-3"></i>
+                        <span class="font-medium text-gray-900">Front-end UI</span>
+                        <span class="text-xs text-gray-500 mt-1">JS, React, Tailwind CSS</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-brand-500 transition-colors text-center">
+                        <i data-lucide="git-branch" class="w-8 h-8 text-gray-700 mb-3"></i>
+                        <span class="font-medium text-gray-900">Git & GitHub</span>
+                        <span class="text-xs text-gray-500 mt-1">Controle de Versão</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="py-20 bg-white border-y border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-10 text-center">Projetos de Destaque</h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
+                        <div class="h-48 bg-gray-200 overflow-hidden relative">
+                            <img src="https://raw.githubusercontent.com/HiroVasconcelos/MMO-Helpdesk-Analytics-End-to-End-Data-Pipeline/main/img/dashboard-print.png" alt="Dashboard MMO Helpdesk Analytics" class="object-cover w-full h-full">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">MMO Helpdesk Analytics</h3>
+                            <p class="text-gray-600 text-sm mb-4">Pipeline ETL end-to-end para análise de SLA em operações de suporte. Geração de base sintética estatística com Python, modelagem de regras no BigQuery e dashboard gerencial no Looker Studio.</p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2 py-1 bg-gray-200 text-xs font-medium rounded text-gray-700">Python</span>
+                                <span class="px-2 py-1 bg-gray-200 text-xs font-medium rounded text-gray-700">BigQuery (SQL)</span>
+                                <span class="px-2 py-1 bg-gray-200 text-xs font-medium rounded text-gray-700">Looker Studio</span>
+                            </div>
+                            
+                            <div class="flex gap-4">
+                                <a href="https://lookerstudio.google.com/reporting/e1019616-9750-4241-bf74-ee0e9f8e96b1" target="_blank" class="text-sm font-medium text-brand-600 hover:text-brand-500 flex items-center gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                        <path d="M15 3h6v6"/>
+                                        <path d="M10 14 21 3"/>
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    </svg> Dashboard
+                                </a>
+                                <a href="https://github.com/HiroVasconcelos/MMO-Helpdesk-Analytics-End-to-End-Data-Pipeline" target="_blank" class="text-sm font-medium text-brand-600 hover:text-brand-500 flex items-center gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                                        <path d="M9 18c-4.51 2-5-2-7-2"/>
+                                    </svg> Repositório
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia" class="py-20 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <h2 class="text-5xl font-bold tracking-tight text-gray-900 mb-10 text-center">Experiência Profissional</h2>
+                
+                <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
+                    
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-gray-900 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <h3 class="font-bold text-gray-900">Assistente de Inteligência de Mercado</h3>
+                                <span class="text-xs font-medium text-brand-600 bg-brand-50 px-2 py-1 rounded">Abr 2025 - Atual</span>
+                            </div>
+                            <div class="text-sm text-gray-500 mb-3">Universidade La Salle Canoas</div>
+                            <p class="text-gray-600 text-sm">Responsável pela engenharia de dados em diferentes frentes. Desenvolvimento de automações críticas via Google Apps Script (consumo de API) e construção de múltiplos painéis analíticos no Looker Studio para suporte estratégico aos setores.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-gray-400 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <h3 class="font-bold text-gray-900">Assistente de Computação</h3>
+                                <span class="text-xs font-medium text-gray-600 bg-gray-100 px-2 py-1 rounded">Mar 2023 - Abr 2025</span>
+                            </div>
+                            <div class="text-sm text-gray-500 mb-3">Universidade La Salle Canoas</div>
+                            <p class="text-gray-600 text-sm">Gestão de infraestrutura e manipulação de dados legados. Atuação como responsável técnico no projeto de digitalização de acervo, mapeamento e documentação de processos e levantamento de dados estatísticos operacionais do setor.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-gray-400 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                            <div class="flex justify-between items-center mb-1">
+                                <h3 class="font-bold text-gray-900">Assistente Administrativo</h3>
+                                <span class="text-xs font-medium text-gray-600 bg-gray-100 px-2 py-1 rounded">2021 - 2023</span>
+                            </div>
+                            <div class="text-sm text-gray-500 mb-3">Marcecar - Marcenaria e Carpintaria</div>
+                            <p class="text-gray-600 text-sm">Gestão de rotinas administrativas, estruturação de informações e suporte operacional aos processos internos e atendimento aos fluxos da empresa.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-20 bg-white border-y border-gray-100">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-6">Vamos conversar</h2>
+                <p class="text-gray-600 mb-10">
+                    Atualmente aberto a novas oportunidades e projetos freelance. Se você tem um problema com dados ou precisa de uma aplicação do zero, entre em contato.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+                    <button id="copy-email-btn" class="px-8 py-3 rounded-lg bg-brand-600 text-white font-medium hover:bg-brand-700 transition-colors shadow-md w-full sm:w-auto flex items-center justify-center gap-2 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                        </svg>
+                        Copiar E-mail
+                    </button>
+                    <a href="https://linkedin.com/in/guilherme-ayres-vasconcelos" target="_blank" class="px-8 py-3 rounded-lg border border-gray-300 bg-white text-gray-700 font-medium hover:bg-gray-50 transition-colors w-full sm:w-auto flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect width="4" height="12" x="2" y="9"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg> 
+                        LinkedIn
+                    </a>
+                </div>
+
+                <form action="https://formspree.io/f/xgopeend" method="POST" class="text-left space-y-4 max-w-lg mx-auto bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-200">
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Seu E-mail</label>
+                        <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+                        <textarea name="message" id="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-2 px-4 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition-colors">
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+                <div class="flex gap-6 mb-4">
+                    <a href="https://github.com/HiroVasconcelos" target="_blank" class="hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                            <path d="M9 18c-4.51 2-5-2-7-2"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/guilherme-ayres-vasconcelos" target="_blank" class="hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect width="4" height="12" x="2" y="9"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                </div>
+                <p class="text-sm">
+                    &copy; <span id="year"></span> Guilherme Vasconcelos. Construído com HTML e Tailwind CSS.
+                </p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
